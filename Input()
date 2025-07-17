@@ -1,0 +1,11 @@
+# 19. Input()
+inputs = input().split()
+x = int(inputs[0])
+k = int(inputs[1])
+polynomial = input()
+polynomial_with_value = polynomial.replace('x', str(x))
+result = eval(polynomial_with_value)
+if result == k:
+    print(True)
+else:
+    print(False)
