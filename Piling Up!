@@ -1,0 +1,18 @@
+# 18. Piling Up!
+num = int(input())
+for i in range(num):
+    num = int(input())
+    cubes = list(map(int, input().split()))
+    top = float('inf')
+    while cubes:
+        left = cubes[0]
+        right = cubes[-1]
+        if left >= right and left <= top:
+            top = cubes.pop(0)
+        elif cubes[-1] >= cubes[0] and cubes[-1] <= top:
+            top = cubes.pop()
+        else:
+            print("No")
+            break
+    else:
+        print("Yes")
