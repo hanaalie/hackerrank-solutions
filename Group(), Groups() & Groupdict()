@@ -1,0 +1,10 @@
+# 20. Group(), Groups() & Groupdict()
+string = input()
+found = False
+for i in range(len(string) - 1):
+    if string[i] == string[i + 1] and string[i].isalnum():
+        print(string[i])
+        found = True
+        break
+if not found:
+    print(-1)
